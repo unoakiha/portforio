@@ -1,0 +1,226 @@
+@charset "UTF-8";
+/* CSS Document */
+* {
+    color: #071148;
+}
+
+body {
+    background-color: #E2FBFA;
+}
+
+header {
+    background-image: url("../Image/25640411.jpg");
+    background-size: 100% 250px;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 0 30px;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+}
+
+h1 {
+    color: #333;
+    font-size: 60px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.pcenter {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.menuimg {
+    max-width: 200px;
+}
+
+.listbox {
+    margin-left: 250px;
+}
+
+.Hdcontainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* 768px以下の画面幅対応 */
+@media (max-width: 768px) {
+    .Hdcontainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menuimg {
+        max-width: 100px;
+    }
+
+    .listbox {
+        margin-left: 0;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .name h1, .name h2 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+}
+
+.address {
+    padding-top: 30px;
+    text-align: center;
+    margin-left: auto;
+}
+
+.Fdcontainer {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.Fcontainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* フッターのレスポンシブ設定 */
+@media (max-width: 768px) {
+    .Fdcontainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .Fcontainer {
+        justify-content: center;
+    }
+
+    .Fcontainer li {
+        max-width: 100px;
+    }
+
+    .address {
+        margin-left: 0;
+        text-align: center;
+        padding-top: 10px;
+    }
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel__track-container {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.carousel__track {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel__slide {
+    flex: 0 0 80%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* カルーセルのレスポンシブ設定 */
+@media (max-width: 768px) {
+    .carousel__slide {
+        flex: 0 0 100%;
+    }
+}
+
+.carousel__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.carousel__button--left {
+    left: 10px;
+}
+
+.carousel__button--right {
+    right: 10px;
+}
+
+.slideimg {
+    max-height: 800px;
+}
+
+.right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px; /* 通常は50pxの間隔 */
+    justify-content: center;
+}
+
+.gallery img {
+    max-width: 100%; /* 親コンテナの幅に収まるように */
+    max-height: 600px; /* 最大高さを制限 */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* レスポンシブ対応（画面幅が768px以下の場合） */
+@media (max-width: 768px) {
+    .gallery {
+        gap: 20px; /* 画像間の間隔を20pxに縮小 */
+        padding: 10px;
+    }
+
+    .gallery img {
+        max-width: 90%; /* 画像の最大幅を90%に設定して少し縮小 */
+        max-height: 300px; /* 最大高さを300pxに調整 */
+    }
+}
+
+
